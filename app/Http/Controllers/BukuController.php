@@ -14,12 +14,14 @@ class BukuController extends Controller
 
     public function create()
     {
-        //
+        return view('bukus,create');
     }
 
     public function store(Request $request)
     {
-        //
+        Buku::create($request->all());
+        return redirect()->route('bukus.index')->with('success', 'Buku berhasil ditambah.');
+
     }
 
     public function show(string $id)
