@@ -40,8 +40,9 @@ class BukuController extends Controller
         return redirect()->route('bukus.index')->with('success', 'Buku berhasil diubah.');
     }
 
-    public function destroy(string $id)
+    public function destroy(Buku $buku)
     {
-        //
+        $buku->delete();
+        return redirect()->route('bukus.index')->with('success', 'Buku berhasil di hapus');
     }
 }
