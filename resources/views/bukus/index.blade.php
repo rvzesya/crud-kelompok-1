@@ -2,7 +2,7 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
     <h4>Daftar Buku</h4>
-    <a href="{{ route('bukus.create') }}" class="btn btn-primary">Tambah Buku</a>
+    <a href="{{ route('bukus.create') }}" class="btn btn-success">Tambah Buku</a>
 </div>
 
 @if (session('success'))
