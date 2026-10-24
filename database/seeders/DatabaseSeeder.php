@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Buku;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,11 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(BukuSeeder::class);
+        Buku::factory()->count(20)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
