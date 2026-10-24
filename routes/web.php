@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('bukus', BukuController::class);
 
 Route::get('/', function () {
-    return redirect()->route('bukus.index');
+    return view('home');
 })->name('home');
 
 Route::get('/about', function () {

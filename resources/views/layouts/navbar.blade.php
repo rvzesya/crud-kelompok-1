@@ -21,6 +21,10 @@
                     About
                 </x-nav-item>
 
+                <x-nav-item :href="route('bukus.index')" :active="request()->routeIs('bukus.index')">
+                    Management Buku
+                </x-nav-item>
+
             </ul>
         </div>
     </div>
